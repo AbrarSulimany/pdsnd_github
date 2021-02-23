@@ -32,7 +32,7 @@ def get_filters():
     while(month not in months):
         month = input("invalid month name! please enter a valid month name: \n").lower().strip()
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # TO DO: get user input for day of week (all, monday, tuesday, tuesday, wednesday, common_start_hour,friday, sunday)
     days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
     day = input("Which day of week? sunday, monday, tuesday, wednesday, thursday, friday, saturday \n").lower().strip()
     while(day not in days):
@@ -162,7 +162,7 @@ def main():
 
         #Display row data
     while True:
-        display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+        display_data = input('\nWould you like to see 10 lines of raw data? Enter yes or no.\n')
         if display_data.lower() != 'yes':
             break
     print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
