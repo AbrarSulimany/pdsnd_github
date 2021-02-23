@@ -24,20 +24,20 @@ def get_filters():
     city = input("Would you like to see data for Chicago, New York city or Washington? \n").lower().strip()
     while(city not in cities):
         city = input("invalid city name! please enter a valid city name:\n").lower().strip()
-            
-    # TO DO: get user input for month (all, january, february, ... , june)
-    
+
+    # TO DO: get user input for month (all, january, february, march, april, may, june)
+
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
     month = input("Which month? January, February, March, April, May, June or all. \n").lower().strip()
     while(month not in months):
         month = input("invalid month name! please enter a valid month name: \n").lower().strip()
-        
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
     day = input("Which day of week? sunday, monday, tuesday, wednesday, thursday, friday, saturday \n").lower().strip()
     while(day not in days):
         day = input("invalid day number! please enter a valid day number: \n").lower().strip()
-              
+
     print('-'*40)
     return (city, month, day)
 
@@ -65,7 +65,7 @@ def load_data(city, month, day):
     # filter by day of week
     if day != 'all':
         df = df.loc[df['day_of_week'] == day.title()]
-    
+
     return df
 
 
@@ -119,7 +119,7 @@ def trip_duration_stats(df):
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -139,7 +139,7 @@ def user_stats(df):
     except:
         print("no gender data")
 
-    
+
     # TO DO: Display earliest, most recent, and most common year of birth
     try:
         earliest_birth_year = df["Birth Year"].min()
@@ -152,14 +152,14 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-    
+
+
 def main():
-    
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
+
         #Display row data
     while True:
         display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
@@ -173,8 +173,8 @@ def main():
     trip_duration_stats(df)
     user_stats(df)
 
-    
 
-    
+
+
     if __name__ == "__main__":
       	main()
