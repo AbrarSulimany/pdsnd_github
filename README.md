@@ -5,7 +5,8 @@ bikeshare project
 ### Description
 It determines rental times for bicycles, determines the gender of the renter, and determines the locations most desirable to rent
 ### Files used
-Include the files used
-
+chicago
+new_york_city
+washington
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://github.com/AbrarSulimany/pdsnd_github
