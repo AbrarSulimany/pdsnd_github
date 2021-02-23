@@ -1,10 +1,9 @@
 ### Date created
 23/02/2021
 ### Project Title
-bikeshare project 
+bikeshare project
 ### Description
-Describe what your project is about and what it does
-
+It determines rental times for bicycles, determines the gender of the renter, and determines the locations most desirable to rent
 ### Files used
 Include the files used
 
